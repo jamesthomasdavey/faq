@@ -24,16 +24,22 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-image: url('../images/giraffe-vector.png');
+  background-position: bottom right;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-color: #d8ecf9;
 }
 
 .container {
   margin: 0 auto;
   padding: 2rem;
-  max-width: 960px;
+  width: 90%;
+  max-width: 768px;
 }
 
 .header {
-  text-align: center;
+  text-align: right;
   margin-bottom:3rem;
 }
 
@@ -44,24 +50,60 @@ h1 {
 }
 
 .accordion {
+  position: relative;
   margin: 0 auto;
-  width: 620px;
+  width: 100%;
+  border-radius: 1.5rem .5rem .5rem 1.5rem;
+  overflow: hidden;
 }
 
-.accordion__item {
-  border-top: 1px solid #ddd;
+.accordion__item:nth-child(3n+1) {
+  background-color: #E4B057;
 }
 
-.accordion__item:last-child {
-  border-bottom: 1px solid #ddd;
+.accordion__item:nth-child(3n+2) {
+  background-color: #F6EFD6;
+}
+
+.accordion__item:nth-child(3n+3) {
+  background-color: #C6D2A2;
+}
+
+.accordion__wall {
+  position: absolute;
+  pointer-events: none;
+  width: 2rem;
+  height: 100%;
+  background: rgba(0, 0, 0, .1);
 }
 
 .accordion__heading {
   display: flex;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 1rem 4rem;
   font-size: 1.2rem;
   letter-spacing: 1px;
   justify-content: space-between;
+}
+
+.accordion__icon {
+  width: 18px;
+  height: 27px;
+  position: relative;
+  /* background: blue; */
+}
+
+.bar {
+  position: absolute;
+  top: 12px;
+  width: 18px;
+  height: 2px;
+  background: black;
+  border-radius: 2px;
+  transition: 0.4s all ease;
+}
+
+.second-bar {
+  transform: rotate(90deg);
 }
 
 .accordion__heading:hover {
@@ -71,13 +113,13 @@ h1 {
 .accordion__details {
   max-height: 0;
   overflow: hidden;
-  width: 70%;
+  width: 65%;
   transition: 0.3s all ease;
-  margin-left: 2rem;
+  padding-left: 4rem;
 }
 
 .accordion__details > p {
-  padding: 1.2rem 0;
+  padding: 1rem 1rem 2rem 1rem;
   line-height: 1.2rem;
   font-size: 0.8rem;
 }
