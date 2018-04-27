@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/*****************************
+********************* GENERAL
+*****************************/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 960px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom:3rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: .8rem;
+}
+
+.accordion {
+  margin: 0 auto;
+  width: 620px;
+}
+
+.accordion__item {
+  border-top: 1px solid #ddd;
+}
+
+.accordion__item:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion__heading {
+  display: flex;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  justify-content: space-between;
+}
+
+.accordion__heading:hover {
+  cursor: pointer;
+}
+
+.accordion__details {
+  max-height: 0;
+  overflow: hidden;
+  width: 70%;
+  transition: 0.3s all ease;
+  margin-left: 2rem;
+}
+
+.accordion__details > p {
+  padding: 1.2rem 0;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+}
