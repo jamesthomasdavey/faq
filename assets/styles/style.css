@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 .clearfix::after {
   content: "";
   clear: both;
@@ -23,7 +23,7 @@ html {
 *****************************/
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-image: url('../images/giraffe-vector.png');
   background-position: bottom right;
   background-size: 30%;
@@ -103,7 +103,15 @@ h1 {
 }
 
 .second-bar {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
+}
+
+.change.first-bar {
+  transform: rotate(180deg);
+}
+
+.change.second-bar {
+  transform: rotate(0deg);
 }
 
 .accordion__heading:hover {
